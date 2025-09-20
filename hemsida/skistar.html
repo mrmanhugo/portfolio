@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkiStar Weather ↔ Performance — Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="container">
+      <a class="brand" href="../index.html">HS</a>
+      <nav class="nav" id="nav">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="project-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="../index.html">Home</a> / Projects / SkiStar Weather ↔ Performance</div>
+      <h1 class="project-title">SkiStar — Weather ↔ Performance</h1>
+      <p class="project-sub">Python ETL from weather and finance APIs into a star schema, with a Power BI report that compares winter conditions to returns and revenue.</p>
+      <div class="meta">
+        <div class="pill">Stack: Python, SQL, Power BI</div>
+        <div class="pill">Model: Star schema, seasonal time series</div>
+        <div class="pill">Focus: Data quality, simple scenarios</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--project">
+    <div class="container grid-2">
+      <div>
+        <h3>Overview</h3>
+        <p>Goal: understand how winter conditions relate to company performance. Build a repeatable pipeline and a clear report for decisions.</p>
+        <h3>Pipeline</h3>
+        <div class="kv">
+          <ul>
+            <li>Ingest: Open-Meteo for winter metrics, Yahoo Finance for annual returns.</li>
+            <li>Transform: Python ETL to a simple star schema.</li>
+            <li>Visualize: Power BI with measures and filters by resort and year.</li>
+          </ul>
+        </div>
+        <h3>Outcome</h3>
+        <p>Interactive report with trends and a simple “mild vs cold winter” scenario. The pipeline can be reused for new seasons with minimal effort.</p>
+        <a class="back-link" href="../index.html#work">← Back to portfolio</a>
+      </div>
+      <div>
+        <div class="kv">
+          <div class="ph ph-1" style="aspect-ratio:16/9;"></div>
+          <p class="muted" style="margin-top:8px;">Report preview placeholder. Replace with an image or embed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <h3>Let’s work together.</h3>
+        <p class="muted">Open to junior data analyst and BI roles. Based in Sweden.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="mailto:hugo@example.com">Email me</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn btn--ghost" href="https://github.com/USERNAME" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    const topbar = document.getElementById('topbar');
+    burger.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      topbar.classList.toggle('menu-open', open);
+    });
+  </script>
+</body>
+</html>

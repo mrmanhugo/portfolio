@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hugo Sörensen — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="topbar" id="topbar">
+    <div class="container">
+      <a class="brand" href="index.html">HS</a>
+
+      <nav class="nav" id="nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+<section class="hero hero--center" id="top">
+  <div class="container hero__inner">
+    <h1 class="hero-name">Hugo Jernberg Sörensen</h1>
+  </div>
+</section>
+
+      <div class="hero__art">
+        <div class="portrait">
+
+          <div class="ph-img">Your Photo</div>
+        </div>
+        <div class="hero__panel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+            <!-- Profile card -->
+    <div class="profile-card">
+      <img class="profile-photo" src="/bilnd.jpg"alt="Hugo Jernberg
+
+Sörensen">      
+      <div class="profile-copy">
+        <h2>About Hugo.</h2>
+        <p>With a background in information systems and business economics, I turn data into decisions. I work end-to-end: APIs → SQL models → Power BI dashboards. I care about clarity, speed and impact.</p>
+        <div class="profile-actions">
+          <a class="btn" href="mailto:hugo@example.com">Contact</a>
+          <a class="btn btn--light" href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+      <h2>About Hugo.</h2>
+      <p>With a background in information systems and business economics, I turn data into decisions. I work end-to-end: APIs → SQL models → Power BI dashboards. I care about clarity, speed and impact.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Power BI</h3>
+          <p>Clean measures, time series and interactive filters for decision makers.</p>
+        </article>
+        <article class="card">
+          <h3>SQL Modeling</h3>
+          <p>Star schemas and tidy data that load fast and stay maintainable.</p>
+        </article>
+        <article class="card">
+          <h3>Python ETL</h3>
+          <p>Reliable pipelines from weather and finance APIs with data quality checks.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured" id="work">
+    <div class="container">
+      <h2>Featured Portfolio.</h2>
+      <p class="lead">A few projects that show my approach from pipeline to insight.</p>
+
+      <div class="grid">
+        <a class="tile" href="skistar.html" aria-label="SkiStar Weather and Performance">
+          <div class="ph ph-1"></div>
+          <h4>SkiStar Weather ↔ Performance</h4>
+        </a>
+        <a class="tile" href="energy.html" aria-label="Energy and Emissions BI">
+          <div class="ph ph-2"></div>
+          <h4>Energy & Emissions BI</h4>
+        </a>
+        <a class="tile" href="tourism.html" aria-label="Tourism Demand Forecast">
+          <div class="ph ph-3"></div>
+          <h4>Tourism Demand Forecast</h4>
+        </a>
+        <a class="tile" href="sales.html" aria-label="Sales Pipeline Model">
+          <div class="ph ph-4"></div>
+          <h4>Sales Pipeline Model</h4>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta__inner">
+      <p>Have a project that needs help? Then I’m the one you should call.</p>
+      <a class="btn btn--light" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <section class="news">
+    <div class="container">
+      <h2>Latest Projects.</h2>
+      <div class="grid">
+        <a class="post" href="skistar.html">
+          <div class="ph ph-5"></div>
+          <h4>New SkiStar case published</h4>
+          <p>Pipeline + dashboard that links winter conditions to performance.</p>
+        </a>
+        <a class="post" href="energy.html">
+          <div class="ph ph-6"></div>
+          <h4>Power BI tips for seasonal data</h4>
+          <p>How to model winter seasons across calendar years.</p>
+        </a>
+        <a class="post" href="tourism.html">
+          <div class="ph ph-7"></div>
+          <h4>Simple API checks in Python</h4>
+          <p>Keep your data fresh and trustworthy with lightweight tests.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <div>
+        <h3>Let’s work together.</h3>
+        <p class="muted">Open to junior data analyst and BI roles. Based in Sweden.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="mailto:hugo@example.com">Email me</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn btn--ghost" href="https://github.com/USERNAME" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Responsiv mobilmeny
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    const topbar = document.getElementById('topbar');
+    burger.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      topbar.classList.toggle('menu-open', open);
+    });
+  </script>
+</body>
+</html>

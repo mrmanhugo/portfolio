@@ -1,0 +1,229 @@
+/* ===== Clean Light Portfolio (white + navy + blue) ===== */
+/* Headings: Poppins, Body: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@500;700&display=swap');
+
+:root{
+  --bg:        #ffffff;   /* sida */
+  --panel:     #ffffff;   /* kort */
+  --ink:       #0f172a;   /* mörk text */
+  --muted:     #475569;   /* sekundär text */
+  --border:    #e5e7eb;   /* 1px kant */
+  --navy:      #0b1220;   /* rubrik/nav-accent mörkblå */
+  --accent:    #2563eb;   /* blå primär */
+  --accent-2:  #e8f0ff;   /* ljus blå bakgrundsblock */
+
+  --shadow-sm: 0 1px 0 var(--border);
+  --shadow:    0 1px 0 var(--border), 0 10px 30px rgba(2,6,23,.06);
+}
+
+/* Bas / inga rundade hörn */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  color:var(--ink); background:var(--bg); line-height:1.6;
+}
+img{max-width:100%;display:block}
+a,button,input,textarea,.card,.tile,.btn,.portrait,.post,.footer,.header,.nav,section,div{border-radius:0!important}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+
+/* ===== Topbar (ljus, blå hover) ===== */
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:#ffffff; border-bottom:1px solid var(--border);
+  backdrop-filter:saturate(120%) blur(6px);
+}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{
+  font-family:"Poppins",sans-serif; font-weight:700; letter-spacing:.2px;
+  color:var(--navy); text-decoration:none;
+}
+.nav{display:none;gap:24px}
+.nav a{color:var(--ink);text-decoration:none;opacity:.9}
+.nav a:hover{opacity:1;color:var(--accent);text-decoration:underline}
+.burger{width:42px;height:34px;border:0;background:transparent;display:grid;gap:6px;cursor:pointer}
+.burger span{display:block;height:2px;background:#334155}
+.menu-open .nav{
+  display:block; position:absolute; left:0; right:0; top:68px;
+  background:#ffffff; border-bottom:1px solid var(--border); box-shadow:var(--shadow-sm);
+}
+.menu-open .nav a{display:block;padding:14px 20px}
+@media(min-width:900px){.nav{display:flex}.burger{display:none}.menu-open .nav{position:static;border:0;box-shadow:none}}
+
+/* ===== Hero (vit + blå accentblock bakom bilden) ===== */
+.hero{background:#ffffff}
+.hero__inner{display:grid;grid-template-columns:1fr;gap:40px;padding:84px 0 72px}
+@media(min-width:1000px){.hero__inner{grid-template-columns:1.1fr .9fr;align-items:center}}
+
+.hero__copy h1{
+  font-family:"Poppins",sans-serif;
+  font-size:clamp(38px,6vw,64px);
+  line-height:1.05; margin:0 0 10px; font-weight:700; letter-spacing:.01em;
+}
+.hero__copy .hello{display:inline-block;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero__copy .accent{color:var(--accent)}
+.tagline{font-size:18px;color:var(--muted);max-width:62ch;margin:8px 0 22px}
+
+.btn{
+  display:inline-block;padding:12px 18px;background:var(--accent);color:#fff;text-decoration:none;
+  border:1px solid #1d4ed8; box-shadow:var(--shadow-sm)
+}
+.btn:hover{filter:brightness(1.04)}
+.btn--light{background:#fff;color:var(--ink);border:1px solid var(--border)}
+
+.hero__art{position:relative;min-height:340px}
+@media(min-width:1000px){.hero__art{min-height:380px}}
+/* Blå accent-block likt referensen */
+.hero__panel{
+  position:absolute; inset:auto 0 0 18%; height:78%;
+  background:var(--accent-2); border:1px solid #dbe4ff; box-shadow:var(--shadow);
+}
+.portrait{
+  position:absolute; right:6%; top:-24px; width:420px; max-width:88%;
+  background:#f5f7fb; border:1px solid var(--border); box-shadow:var(--shadow); overflow:hidden;
+}
+.ph-img{aspect-ratio:4/5;display:grid;place-items:center;color:#64748b;font-weight:600;background:#f1f5f9}
+
+/* ===== Sektioner (vita kort, blå accentlinjer) ===== */
+.about,.featured,.news{padding:72px 0;background:#ffffff;border-top:1px solid var(--border)}
+.about h2,.featured h2,.news h2{
+  font-family:"Poppins",sans-serif;font-size:28px;margin:0 0 10px;letter-spacing:.01em;color:var(--navy)
+}
+.lead{color:var(--muted);margin:0 0 24px}
+
+.cards{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+.card{background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm);padding:18px}
+.card h3{font-family:"Poppins",sans-serif;margin:0 0 6px;font-size:18px;letter-spacing:.01em;color:var(--navy)}
+@media(min-width:900px){.cards{grid-template-columns:1fr 1fr 1fr}}
+
+/* Featured grid */
+.grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:1100px){.grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+.tile{display:block;color:inherit;text-decoration:none;background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.tile h4{margin:12px 12px 14px 12px;font-size:16px;font-family:"Poppins",sans-serif;color:var(--navy)}
+.tile:hover{outline:1px solid var(--accent);outline-offset:-1px}
+/* Thumb placeholders */
+.ph{aspect-ratio:1/1;border-bottom:1px solid var(--border);background:#f3f6fb}
+.ph-1{background:#e9f1ff}.ph-2{background:#eef2ff}.ph-3{background:#f1f5ff}.ph-4{background:#eff3ff}
+.ph-5,.ph-6,.ph-7{background:#f3f6fb}
+
+/* CTA – ljus blåton, platt */
+.cta{background:#f4f7ff;color:var(--ink);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.cta__inner{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:26px 0}
+
+/* Latest Projects */
+.news .grid{grid-template-columns:1fr;gap:20px}
+@media(min-width:1100px){.news .grid{grid-template-columns:1fr 1fr 1fr}}
+.post{background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm);display:block;color:inherit;text-decoration:none;padding-bottom:12px}
+.post h4{margin:12px 12px 6px 12px;color:var(--navy)}
+.post p{margin:0 12px 14px 12px;color:var(--muted)}
+
+/* Footer */
+.footer{background:#ffffff;border-top:1px solid var(--border)}
+.footer__inner{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:30px 0}
+.muted{color:var(--muted)}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Projectsidor – delar stilen */
+.project-hero{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px 0}
+.breadcrumbs{font-size:14px;color:var(--muted);margin-bottom:10px}
+.breadcrumbs a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--border)}
+.breadcrumbs a:hover{text-decoration:underline}
+.project-title{margin:6px 0 4px 0;font-size:34px;font-family:"Poppins",sans-serif;color:var(--navy)}
+.project-sub{color:var(--muted);max-width:70ch}
+.section--project{background:#fff;border-top:1px solid var(--border);padding:40px 0}
+.kv{background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm);padding:16px;margin-top:16px}
+.meta{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+@media(min-width:900px){.meta{grid-template-columns:1fr 1fr 1fr}}
+.meta .pill{background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm);padding:10px 12px;font-size:14px}
+.grid-2{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:1000px){.grid-2{grid-template-columns:1.2fr .8fr}}
+.back-link{display:inline-block;margin-top:14px;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--border)}
+.back-link:hover{text-decoration:underline}
+
+
+/* === Centered name-only hero === */
+.hero--center .hero__inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52vh;           /* lagom höjd, känns “hero” */
+  padding:96px 0 72px;
+}
+.hero-name{
+  font-family:"Poppins", sans-serif;
+  font-weight:700;
+  letter-spacing:.01em;
+  font-size:clamp(48px, 9vw, 96px);  /* skalar snyggt */
+  color:var(--navy);                 /* mörkblå rubrik */
+  text-align:center;
+  margin:0;
+}
+
+/* === Centered name-only hero (overrides) === */
+.hero--center { background:#fff; }
+.hero--center .hero__inner{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:60vh;
+  padding:96px 0 72px;
+}
+.hero--center .hero-name{
+  font-family:"Poppins", sans-serif;
+  font-weight:700;
+  letter-spacing:.01em;
+  font-size:clamp(48px, 9vw, 96px);
+  color:var(--navy);
+  text-align:center;
+  margin:0;
+}
+
+/* Städa bort ev. gammalt hero-innehåll om något ligger kvar */
+.hero--center .hero__art,
+.hero--center .hello,
+.hero--center .tagline,
+.hero--center .btn { display:none !important; }
+
+/* Om du någon gång hade glow: slå av det här */
+.hero--center::before { content:none !important; }
+
+/* === Profile card (kantigt, matt, diskret) === */
+.profile-card{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:20px;
+  background:#fff;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+  padding:18px;
+  margin-bottom:24px;
+}
+
+.profile-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;              /* fyll rutan, beskär snyggt */
+  aspect-ratio: 4 / 5;           /* klassiskt porträttformat */
+  object-position: 50% 30%;      /* fokus lite högre (ansiktet) */
+  background:#f3f6fb;            /* fallback */
+  border:1px solid var(--border);
+}
+
+.profile-copy h2{
+  margin:0 0 8px 0;
+  font-family:"Poppins",sans-serif;
+  font-size:24px;
+  color:var(--navy);
+}
+
+.profile-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+
+/* Större skärmar: bild vänster, text höger */
+@media (min-width: 900px){
+  .profile-card{
+    grid-template-columns: 280px 1fr;
+    align-items:center;
+  }
+  .profile-photo{aspect-ratio: 3 / 4;}
+}

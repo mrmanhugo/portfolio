@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Energy & Emissions BI — Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="container">
+      <a class="brand" href="../index.html">HS</a>
+      <nav class="nav" id="nav">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="project-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="../index.html">Home</a> / Projects / Energy & Emissions BI</div>
+      <h1 class="project-title">Energy & Emissions BI</h1>
+      <p class="project-sub">Country-level warehouse and Power BI model for production, consumption and emissions with time series measures.</p>
+      <div class="meta">
+        <div class="pill">Stack: SQL, Power BI, DAX</div>
+        <div class="pill">Model: Star schema</div>
+        <div class="pill">Focus: Comparisons, trend analysis</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--project">
+    <div class="container grid-2">
+      <div>
+        <h3>Overview</h3>
+        <p>Built a simple warehouse and report to compare countries across energy KPIs and emission trends.</p>
+        <h3>Model & Measures</h3>
+        <div class="kv">
+          <ul>
+            <li>Dimensions for country, energy source and time.</li>
+            <li>Measures for YoY, rolling 12 and intensity per capita.</li>
+          </ul>
+        </div>
+        <h3>Outcome</h3>
+        <p>Fast exploration and clear storytelling with consistent definitions and clean visuals.</p>
+        <a class="back-link" href="../index.html#work">← Back to portfolio</a>
+      </div>
+      <div>
+        <div class="kv">
+          <div class="ph ph-2" style="aspect-ratio:16/9;"></div>
+          <p class="muted" style="margin-top:8px;">Report preview placeholder.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <h3>Let’s work together.</h3>
+        <p class="muted">Open to junior data analyst and BI roles. Based in Sweden.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="mailto:hugo@example.com">Email me</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn btn--ghost" href="https://github.com/USERNAME" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    const topbar = document.getElementById('topbar');
+    burger.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      topbar.classList.toggle('menu-open', open);
+    });
+  </script>
+</body>
+</html>
+
